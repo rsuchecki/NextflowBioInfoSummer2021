@@ -1,4 +1,4 @@
-# Notes for Nextflow tutorail at BioInfoSummer2021
+# Notes for Nextflow tutorial at BioInfoSummer2021
 
 ## Hello world example
 
@@ -21,7 +21,7 @@ nextflow run main.nf
 
 ## Example workflow 
 
-We are developig a Nextflow DSL2 workkflow based on https://github.com/nathanhaigh/snakemake_template/blob/final/analysis.sh
+We are developing a Nextflow DSL2 workflow based on https://github.com/nathanhaigh/snakemake_template/blob/final/analysis.sh
 
 ### Data and env modules prep
 
@@ -47,7 +47,7 @@ We can also get the local copy of the Singularity image we will be using.
 ln -s /group/courses01/amsi/singularity ./singularity-images
 ```
 
-Normaly nextflow would pull the image from  the remote, 
+Normally nextflow would pull the image from  the remote, 
 but we want to avoid any issues with multiple concurrent pulls in the context of this workshop. 
 
 ### Additional files etc.
