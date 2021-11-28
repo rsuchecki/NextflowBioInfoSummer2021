@@ -28,7 +28,7 @@ We are developig a Nextflow DSL2 workkflow based on https://github.com/nathanhai
 ```sh
 git clone https://github.com/rsuchecki/nextflow-walkthrough.git:
 cd nextflow-walkthrough
-git checkout bis2021  #TODO - replace with semi-blank-branch
+git checkout bis2021_step_0  #TODO - replace with semi-blank-branch
 module load nextflow singularity
 # skipping data download
 # nextflow run setup_data.nf 
@@ -69,8 +69,10 @@ We will be covering the following steps,
 note that there are multiple ways to go about it
 so the contents on the day may differ.
 
+**We will be editing the `main.nf` script file.**
 
-#### First input channel
+
+#### First input channel 
 
 1. Use a channel factory to get FASTQ files from `data/raw_reads`
 2. Apply an operator to limit the number of files e.g. using `take(n)` 
@@ -78,6 +80,15 @@ so the contents on the day may differ.
 4. Use `set` operator to assign the channel to a variable name `ReadsForQcChannel`
 
 Execute `nextflow run main.nf`
+
+
+**If** the above tasks caused you some un-recoverable issues you can rename or delete your
+`main.nf` and check-out a revision where the above steps have been captured.
+
+```sh
+mv main.nf step1.nf
+git checkout bis2021_step_1
+```
 
 #### FASTQC & MULIQC
 
@@ -87,6 +98,14 @@ Execute `nextflow run main.nf`
 
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
+**If** the above tasks caused you some un-recoverable issues you can rename or delete your
+`main.nf` and check-out a revision where the above steps have been captured.
+
+```sh
+mv main.nf step2.nf
+git checkout bis2021_step_2
+```
+
 #### BWA_INDEX
 
 1. (Optional) Use a channel factory to get FASTA file from `data/references/`
@@ -94,6 +113,14 @@ Execute `nextflow run main.nf -profile singularity,slurm -resume`
 3. Add `BWA_INDEX` call to workflow 
 
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
+
+**If** the above tasks caused you some un-recoverable issues you can rename or delete your
+`main.nf` and check-out a revision where the above steps have been captured.
+
+```sh
+mv main.nf step3.nf
+git checkout bis2021_step_3
+```
 
 #### TRIM_PE
 
@@ -104,12 +131,28 @@ Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
+**If** the above tasks caused you some un-recoverable issues you can rename or delete your
+`main.nf` and check-out a revision where the above steps have been captured.
+
+```sh
+mv main.nf step4.nf
+git checkout bis2021_step_4
+```
+
 #### BWA_ALIGN
 
 1. Add process definition for `BWA_ALIGN` 
 2. Add `BWA_ALIGN` call to workflow 
    
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
+
+**If** the above tasks caused you some un-recoverable issues you can rename or delete your
+`main.nf` and check-out a revision where the above steps have been captured.
+
+```sh
+mv main.nf step5.nf
+git checkout bis2021_step_5
+```
 
 #### MERGE_BAMS (bonus task)
 
@@ -118,24 +161,20 @@ Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
-
-
-
-If the above tasks caused you some un-recoverable issues you can rename or delete your
+**If** the above tasks caused you some un-recoverable issues you can rename or delete your
 `main.nf` and check-out a revision where the above steps have been captured.
 
 ```sh
-mv main.nf [?].nf
-git checkout ??
+mv main.nf step6.nf
+git checkout bis2021_step_6
 ```
 
+### Alternative syntax styles in workflow definition
 
+```sh
+mv main.nf nextsteps.nf
+git checkout bis2021
+```
 
-Checkpoints 
+Refer to comments in the `workflow { }` block.
 
-1. Input channels
-2. FASTQC & MULIQC
-3. BWA_INDEX
-4. TRIM_PE
-5. BWA_ALIGN
-6. MERGE_BAMS
