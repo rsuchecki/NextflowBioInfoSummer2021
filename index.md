@@ -85,12 +85,8 @@ Execute `nextflow run main.nf`
 
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
-`main.nf` and check-out a revision where the above steps have been captured.
-
-```sh
-mv main.nf step1.nf
-git checkout bis2021_step_1
-```
+`main.nf` and check-out a revision where the above steps have been captured,
+`mv main.nf step1.nf && git checkout bis2021_step_1`
 
 ### FASTQC & MULIQC
 
@@ -101,12 +97,8 @@ git checkout bis2021_step_1
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
-`main.nf` and check-out a revision where the above steps have been captured.
-
-```sh
-mv main.nf step2.nf
-git checkout bis2021_step_2
-```
+`main.nf` and check-out a revision where the above steps have been captured,
+`mv main.nf step2.nf && git checkout bis2021_step_2`
 
 ### BWA_INDEX
 
@@ -117,12 +109,8 @@ git checkout bis2021_step_2
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
-`main.nf` and check-out a revision where the above steps have been captured.
-
-```sh
-mv main.nf step3.nf
-git checkout bis2021_step_3
-```
+`main.nf` and check-out a revision where the above steps have been captured,
+`mv main.nf step3.nf && git checkout bis2021_step_3`
 
 ### TRIM_PE
 
@@ -134,12 +122,8 @@ git checkout bis2021_step_3
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
-`main.nf` and check-out a revision where the above steps have been captured.
-
-```sh
-mv main.nf step4.nf
-git checkout bis2021_step_4
-```
+`main.nf` and check-out a revision where the above steps have been captured,
+`mv main.nf step4.nf && git checkout bis2021_step_4`
 
 ### BWA_ALIGN
 
@@ -149,12 +133,9 @@ git checkout bis2021_step_4
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
-`main.nf` and check-out a revision where the above steps have been captured.
+`main.nf` and check-out a revision where the above steps have been captured,
+`mv main.nf step5.nf && git checkout bis2021_step_5`
 
-```sh
-mv main.nf step5.nf
-git checkout bis2021_step_5
-```
 
 ### MERGE_BAMS (bonus task)
 
@@ -164,12 +145,8 @@ git checkout bis2021_step_5
 Execute `nextflow run main.nf -profile singularity,slurm -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
-`main.nf` and check-out a revision where the above steps have been captured.
-
-```sh
-mv main.nf step6.nf
-git checkout bis2021_step_6
-```
+`main.nf` and check-out a revision where the above steps have been captured,
+`mv main.nf step6.nf && git checkout bis2021_step_6`
 
 ### Alternative syntax styles in workflow definition
 
