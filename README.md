@@ -1,4 +1,4 @@
-# bioinfosummer2021
+# Notes for Nextflow tutorail at BioInfoSummer2021
 
 ## Hello world example
 
