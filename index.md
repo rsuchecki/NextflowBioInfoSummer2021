@@ -3,6 +3,18 @@
 These are intended to supplement the live tutorial
 and may not contain sufficient detail for self-guided learning.
 
+## Basics
+
+1. Get login details from organizers and ssh to zeus
+2. We will work in scratch space
+
+```sh
+cd /scratch/courses01
+mkdir -p $USER
+cd $USER
+```
+
+
 ## Hello world example
 
 ```sh
@@ -29,16 +41,19 @@ We are developing a Nextflow DSL2 workflow (loosely) based on [this bash script]
 ## Data and env modules prep
 
 ```sh
-git clone https://github.com/rsuchecki/nextflow-walkthrough.git:
+cd /scratch/courses01/$USER
+git clone --branch bis2021_step_0 https://github.com/rsuchecki/nextflow-walkthrough.git
 cd nextflow-walkthrough
-git checkout bis2021_step_0  #TODO - replace with semi-blank-branch
 module load nextflow singularity
-# skipping data download
-# nextflow run setup_data.nf 
 ```
 
-We can either use  `setup_data.nf` (commented out above), or, 
-we can symlink to the data already on the group drive.
+We can **either** use
+
+```sh
+nextflow run setup_data.nf 
+```
+
+**or** just symlink to the data previously downloaded and available on the group drive.
 
 ```sh
 ln -s /group/courses01/amsi/data/
@@ -50,7 +65,7 @@ We can also get the local copy of the Singularity image we will be using.
 ln -s /group/courses01/amsi/singularity ./singularity-images
 ```
 
-Normally nextflow would pull the image from  the remote, 
+Normally nextflow would pull the image from the remote, 
 but we want to avoid any issues with multiple concurrent pulls in the context of this workshop. 
 
 ## Additional files etc.
