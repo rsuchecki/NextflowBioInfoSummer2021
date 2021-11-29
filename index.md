@@ -109,7 +109,7 @@ Execute `nextflow run main.nf`
 2. Include `publishDir` directive in `MULTIQC` to copy results to `results/multiqc`
 3. Combine them in a workflow, reading from `ReadsForQcChannel`
 
-Execute `nextflow run main.nf -profile singularity,slurm -resume`
+Execute `nextflow run main.nf -profile singularity,zeus -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
 `main.nf` and check-out a revision where the above steps have been captured,
@@ -121,7 +121,7 @@ Execute `nextflow run main.nf -profile singularity,slurm -resume`
 2. Add process definition for `BWA_INDEX` 
 3. Add `BWA_INDEX` call to workflow 
 
-Execute `nextflow run main.nf -profile singularity,slurm -resume`
+Execute `nextflow run main.nf -profile singularity,zeus -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
 `main.nf` and check-out a revision where the above steps have been captured,
@@ -134,7 +134,7 @@ Execute `nextflow run main.nf -profile singularity,slurm -resume`
 3.  Add process definition for TRIM_PE (Trimmomatic)
 4.  Add `TRIM_PE` call to workflow 
 
-Execute `nextflow run main.nf -profile singularity,slurm -resume`
+Execute `nextflow run main.nf -profile singularity,zeus -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
 `main.nf` and check-out a revision where the above steps have been captured,
@@ -145,7 +145,7 @@ Execute `nextflow run main.nf -profile singularity,slurm -resume`
 1. Add process definition for `BWA_ALIGN` 
 2. Add `BWA_ALIGN` call to workflow 
    
-Execute `nextflow run main.nf -profile singularity,slurm -resume`
+Execute `nextflow run main.nf -profile singularity,zeus -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
 `main.nf` and check-out a revision where the above steps have been captured,
@@ -157,7 +157,7 @@ Execute `nextflow run main.nf -profile singularity,slurm -resume`
 1. Add `MERGE_BAMS` process such that `samtools merge` is used (with 2 CPU threads) to merge per sample BAMs into one.
 2. Add `MERGE_BAMS` call to workflow 
 
-Execute `nextflow run main.nf -profile singularity,slurm -resume`
+Execute `nextflow run main.nf -profile singularity,zeus -resume`
 
 **If** the above tasks caused you some un-recoverable issues you can rename or delete your
 `main.nf` and check-out a revision where the above steps have been captured,
